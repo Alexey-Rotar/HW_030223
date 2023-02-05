@@ -17,8 +17,11 @@ int[,] CreatingArray2D()
 void OutputingArray(float[] array)
 {
     for (int i=0; i<array.Length; i++)
-            Console.Write(array[i].ToString("0.0") + "  ");
-    Console.WriteLine();
+        if (i<array.Length-1) 
+            Console.Write(array[i].ToString("#.0") + "; ");
+        else
+            Console.Write(array[i].ToString("#.0") + ".");
+            Console.WriteLine("");
 }
 
 // Вывод 2D-массива
