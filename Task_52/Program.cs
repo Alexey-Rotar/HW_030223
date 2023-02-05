@@ -1,7 +1,7 @@
 ﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 // Генерация случайного 2D-массива размерностью [2...10] и диапазоном значений [0...9]
-int[,] CreatingArray2D()
+int[,] GeneratingArray2D()
 {
     Random rnd = new Random();
     int[,] array = new int[rnd.Next(2, 11), rnd.Next(2, 11)];
@@ -37,7 +37,7 @@ void OutputingArray2D(int[,] array)
 }
 
 // Получение массива средних значений по столбцам
-float[] GgettingColumnsAverageValues(int[,] array)
+float[] GettingColumnsAverageValues(int[,] array)
 {
     float[] resultArray = new float[array.GetLength(1)];
     for (int i=0; i<array.GetLength(1); i++)
@@ -50,8 +50,8 @@ float[] GgettingColumnsAverageValues(int[,] array)
 }
 
 
-int [,] array2D = CreatingArray2D();
+int [,] array2D = GeneratingArray2D();
 OutputingArray2D(array2D);
 
 Console.WriteLine("Средние значения по столбцам:");
-OutputingArray(GgettingColumnsAverageValues(array2D));
+OutputingArray(GettingColumnsAverageValues(array2D));
